@@ -1,0 +1,64 @@
+<html>  
+ <head> 
+ <title>Function System Iterator in Javascript using Canvas</title>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.19/jquery-ui.min.js"></script>
+<LINK REL=StyleSheet HREF="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.19/themes/ui-lightness/jquery-ui.css" TYPE="text/css" MEDIA="screen">
+<LINK REL=StyleSheet HREF="IFS.css" TYPE="text/css" MEDIA="screen">
+ 
+  <script type="application/javascript" src="IFS.js"></script> 
+    <script type="application/javascript" src="IFSApp.js"></script> 
+  <script type="application/javascript">
+var counter;
+  $(document).ready(function(){
+	counter = 2.0;
+  });
+  
+  </script>
+    
+  <link rel="stylesheet" type="text/css" 
+media="screen" href="CellAuto.css">
+ </head>  
+ <body onload="IFSApp.init(1280,720);" >  
+  <div class="container">
+  <div id="ui">
+  
+  <input type="text" name="countfield" class="countfield" value="1000" />
+  
+  <div class="matrix-ui round">
+  <div class="header" >Transform A</div> 
+  <input type="text" name="a0" class="matrixfield" value="0.5" /><input type="text" name="a1" class="matrixfield" value="0" /><input type="text" name="a2" class="matrixfield" value="0.5" />
+  <input type="text" name="b0" class="matrixfield" value="0" /><input type="text" name="b1" class="matrixfield" value="0.5" /><input type="text" name="b2" class="matrixfield" value="0.5" />
+  <input type="text" name="c0" class="matrixfield" value="0" /><input type="text" name="c1" class="matrixfield" value="0" /><input type="text" name="c2" class="matrixfield" value="0.5" />
+  <div class="clear"></div>
+  <div class="inline">%</div><input type="text" name="ta0" class="matrixfield" value="0.33" />
+  </div>
+  
+  <div class="matrix-ui round">
+  <div class="header" >Transform B</div> 
+  <input type="text" name="a0" class="matrixfield" value="0.5" /><input type="text" name="a1" class="matrixfield" value="0" /><input type="text" name="a2" class="matrixfield" value="0" />
+  <input type="text" name="b0" class="matrixfield" value="0" /><input type="text" name="b1" class="matrixfield" value="0.5" /><input type="text" name="b2" class="matrixfield" value="0.5" />
+  <input type="text" name="c0" class="matrixfield" value="0" /><input type="text" name="c1" class="matrixfield" value="0" /><input type="text" name="c2" class="matrixfield" value="0.5" />
+  <div class="clear"></div>
+  <div class="inline">%</div><input type="text" name="ta0" class="matrixfield" value="0.33" />
+  </div>
+  
+  <div class="matrix-ui round">
+  <div class="header" >Transform C</div> 
+  <input type="text" name="a0" class="matrixfield" value="0.5" /><input type="text" name="a1" class="matrixfield" value="0" /><input type="text" name="a2" class="matrixfield" value="0" />
+  <input type="text" name="b0" class="matrixfield" value="0" /><input type="text" name="b1" class="matrixfield" value="0.5" /><input type="text" name="b2" class="matrixfield" value="0" />
+  <input type="text" name="c0" class="matrixfield" value="0" /><input type="text" name="c1" class="matrixfield" value="0" /><input type="text" name="c2" class="matrixfield" value="0.5" />
+  <div class="clear"></div>
+  <div class="inline">%</div><input type="text" name="ta0" class="matrixfield" value="0.33" />
+  </div>
+  <button id="iterate-btn" class="round">Iterate!</button>
+  <button id="reset-btn" class="round">Reset</button>
+  
+  
+  </div>
+    <div id="canvasdiv" class="round border shadow">
+    <canvas id="canvas" width="1280px" height="720px"></canvas>  
+    </div>
+   
+ </body>  
+</html> 

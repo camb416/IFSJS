@@ -1,0 +1,91 @@
+body{
+font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size:70%;
+background-color:#EDF5F3;
+letter-spacing:0.06em;
+}
+
+.matrixfield, .countfield{
+   background-color: #AAAAAA;
+    border: 1px solid #888888;
+    color: white;
+  
+
+
+}
+
+.matrixfield{
+    margin: 2px;
+    width: 40px;
+      float: left;
+}
+.countfield{
+width:132px;
+margin-bottom:10px;
+}
+
+#ui{
+width:132px;
+float:left;
+padding:30px 10px  10px 10px;
+}
+.matrix-ui{
+background-color:#AAAAAA;
+margin: 0 0 10px 0 ;
+height:118px;
+}
+
+.clear{
+clear:both;
+}
+
+
+
+.inline{
+float:left;
+margin-left:37px;
+}
+
+.header{
+clear:both;
+background-color:#000000;
+color:white;
+padding:4px;
+}
+#canvasdiv{
+float:left;
+background-color:#FFFFFF;
+}
+
+#iterate-btn, #reset-btn{
+	color:white;
+	background-color:#aaa;
+	width:60px;
+	margin:0;
+	
+}
+#iterate-btn{
+margin-left:2px;
+}
+
+.round {
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+.border{
+border: 1px #AAA solid;
+}
+.shadow {
+  -moz-box-shadow:    1px 1px 3px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 3px 1px #ccc;
+  box-shadow:         1px 1px 3px 1px #ccc;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 1480px;
+
+}
