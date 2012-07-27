@@ -1,3 +1,6 @@
+
+
+
 (function( global ) {
   var IFSApp = (function() {
 
@@ -7,6 +10,13 @@
     //var numCols = -1;
     var cellsX = [];
     var cellsY = [];
+    var cellColors = [];
+
+	var Color = function(r_in,g_in,b_in) {  
+  this.r = Math.floor(r_in);
+  this.g = Math.floor(g_in);
+  this.b = Math.floor(b_in); 
+}
 
 	var w;
 	var h;
@@ -14,7 +24,6 @@
 	var i;
 	var j;
 	var iterations;
-	
 	var initialVals = [0.5,0,0.5,0,0.5,0.5,0,0,0.5,0.33,0.5,0,0,0,0.5,0.5,0,0,0.5,0.33,0.5,0,0,0,0.5,0,0,0,0.5,0.33];
 	
 	var matrices = [{
@@ -105,12 +114,16 @@
             		ty = Math.random();
             		cellsX[i] = tx;
             		cellsY[i] = ty;
+            		cellColors[i] = new Color(Math.random()*128,Math.random()*128,Math.random()*128);
             		//ctx.fillRect(tx,ty,1,1);
             		//inefficient+=tx+",";
             	}
             	
             	for(j=0;j<count;j++){
-            		ctx.fillRect(cellsX[j]*w,cellsY[j]*h,1,1);
+            	//ctx.fillStyle="rgb(255,0,0)";
+            	//console.log("rgb("+cellColors[j].r+","+cellColors[j].g+","+cellColors[j].b+")");
+            	ctx.fillStyle = "rgb("+cellColors[j].r+","+cellColors[j].g+","+cellColors[j].b+")";
+            		ctx.fillRect(cellsX[j]*w,cellsY[j]*h,2,2);
             	}
          
         	}
@@ -118,7 +131,7 @@
         },
         
         iterate : function(counter){
-       //console.log(cellsX);
+   
         	var canvas = document.getElementById("canvas");  
       		if (canvas.getContext) {  
             	var ctx = canvas.getContext("2d");  
@@ -178,8 +191,8 @@
             			cellsX[j] = t.a[0]*x+t.a[1]*y+t.a[2]*z;
             			cellsY[j] = t.b[0]*x+t.b[1]*y+t.b[2]*z;
             			
-            			
-            		ctx.fillRect(cellsX[j]*w,cellsY[j]*h,1,1);	
+            			ctx.fillStyle = "rgb("+cellColors[j].r+","+cellColors[j].g+","+cellColors[j].b+")";
+            		ctx.fillRect(cellsX[j]*w,cellsY[j]*h,2,2);	
             	}
             // console.log(counter);		
             	
